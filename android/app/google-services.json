@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1075993512688",
+    "project_id": "restaurant-app-970a8",
+    "storage_bucket": "restaurant-app-970a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1075993512688:android:cea7429191405db8b91035",
+        "android_client_info": {
+          "package_name": "com.example.restaurant_app_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaqAOicYxkAzAFtOSnFGEyuH9MNZswcYI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
