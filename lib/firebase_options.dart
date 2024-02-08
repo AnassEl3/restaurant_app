@@ -17,15 +17,24 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        return ios;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for ios - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -43,38 +52,11 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBbm_mbjiZq406zGlVjeiiI-oak-NkHX9w',
-    appId: '1:1075993512688:web:fbaf32d012616566b91035',
-    messagingSenderId: '1075993512688',
-    projectId: 'restaurant-app-970a8',
-    authDomain: 'restaurant-app-970a8.firebaseapp.com',
-    storageBucket: 'restaurant-app-970a8.appspot.com',
-  );
-
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyBaqAOicYxkAzAFtOSnFGEyuH9MNZswcYI',
     appId: '1:1075993512688:android:cea7429191405db8b91035',
     messagingSenderId: '1075993512688',
     projectId: 'restaurant-app-970a8',
     storageBucket: 'restaurant-app-970a8.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBtvrKEpRHlinGS2qGwf-5bQmq3-WjuDsM',
-    appId: '1:1075993512688:ios:13ab2cc32afe2af3b91035',
-    messagingSenderId: '1075993512688',
-    projectId: 'restaurant-app-970a8',
-    storageBucket: 'restaurant-app-970a8.appspot.com',
-    iosBundleId: 'com.example.restaurantAppFlutter',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBtvrKEpRHlinGS2qGwf-5bQmq3-WjuDsM',
-    appId: '1:1075993512688:ios:0d2179d2486e0602b91035',
-    messagingSenderId: '1075993512688',
-    projectId: 'restaurant-app-970a8',
-    storageBucket: 'restaurant-app-970a8.appspot.com',
-    iosBundleId: 'com.example.restaurantAppFlutter.RunnerTests',
   );
 }

@@ -10,6 +10,9 @@ dependencies:
   flutter:
     sdk: flutter
   font_awesome_flutter: ^10.7.0
+  firebase_core: ^2.25.3
+  cloud_firestore: ^4.15.3
+  logger: ^1.0.0
 
 dev_dependencies:
   flutter_test:
